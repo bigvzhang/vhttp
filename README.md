@@ -15,14 +15,14 @@ git clone https://github.com/bigvzhang/vhttp.git
 ```
   1. goto the repository and create the build directory and then cd it
 
-    ```
+```
 cd ${TheRepsitory}
 mkdir build
 cd build
 ```
   1. use cmake to create projects and build
     * For windows, specify option -A with x64 to create a x64 solution or Win32 to create a Win32 solution. Then use nmake For example:
-       ```
+ ```
 REM if cmake fails to search boost dir, please set the following variables
 REM SET BOOST_INCLUDEDIR={boost header dir}
 REM SET BOOST_LIBRARYDIR={boost library dir}
@@ -37,7 +37,7 @@ MSBuild vhttp.sln /p:Configuration=Release;Platform=x64
 ```
     * For Linux, run cmake and then make
 
-       ```
+```
 #if cmake fails to search boost dir, please set the following variable
 #export BOOST_ROOT={boost install dir}
 cmake ../cmake
@@ -45,7 +45,7 @@ make
 ```
 
 #### Run
-   ```
+```
 Usage: vhttp <address> <port> <doc_root> <threads>
 Example:
     vhttp 0.0.0.0 8080 . 1
