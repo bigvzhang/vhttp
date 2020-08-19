@@ -1,11 +1,13 @@
 # VHTTP - Virya HTTP
 A minimalistic and fast http server, built in c++ and on boost library.
-####Software Dependencies and Version Requirements
+
+#### Software Dependencies and Version Requirements
  - cmake version >= 3.3
  - boost version >= 1.74.0
  - GCC   version >= 4.7
  - MSVC  version >= 14.0
-####Build
+
+#### Build
   1. clone the software from the repsoistory
 
     ```
@@ -20,8 +22,6 @@ cd build
     ```
   1. use cmake to create projects and build
     * For windows, specify option -A with x64 to create a x64 solution or Win32 to create a Win32 solution. Then use nmake For example:
-
-
        ```
 REM if cmake fails to search boost dir, please set the following variables
 REM SET BOOST_INCLUDEDIR={boost header dir}
@@ -44,13 +44,13 @@ cmake ../cmake
 make
        ```
 
-####Run
+#### Run
    ```
 Usage: vhttp <address> <port> <doc_root> <threads>
 Example:
     vhttp 0.0.0.0 8080 . 1
    ```
-####Files
+#### Files
   | File                         | Description                                |
   | :-------------               | :---------                                 |
   |src_cpp/main.cpp              | create server                              |
