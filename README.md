@@ -11,8 +11,9 @@ A minimalistic and fast http server, built in c++ and on boost library.
   1. clone the software from the repsoistory
 
     ```
-    git clone https://github.com/bigvzhang/vhttp.git
+git clone https://github.com/bigvzhang/vhttp.git
     ```
+
   1. goto the repository and create the build directory and then cd it
 
     ```
