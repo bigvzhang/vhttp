@@ -317,7 +317,7 @@ public:
             {
                 res.set(http::field::server,
                     std::string(BOOST_BEAST_VERSION_STRING) +
-                        " advanced-server");
+                        " vhttp");
             }));
 
         // Accept the websocket handshake
@@ -719,9 +719,9 @@ int main(int argc, char* argv[])
     if (argc != 5)
     {
         std::cerr <<
-            "Usage: advanced-server <address> <port> <doc_root> <threads>\n" <<
+            "Usage: vhttp <address> <port> <doc_root> <threads>\n" <<
             "Example:\n" <<
-            "    advanced-server 0.0.0.0 8080 . 1\n";
+            "    vhttp 0.0.0.0 8080 . 1\n";
         return EXIT_FAILURE;
     }
     auto const address = net::ip::make_address(argv[1]);
