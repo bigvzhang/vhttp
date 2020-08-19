@@ -12,15 +12,14 @@ A minimalistic and fast http server, built in c++ and on boost library.
 
     ```
 git clone https://github.com/bigvzhang/vhttp.git
-    ```
-
+```
   1. goto the repository and create the build directory and then cd it
 
     ```
 cd ${TheRepsitory}
 mkdir build
 cd build
-    ```
+```
   1. use cmake to create projects and build
     * For windows, specify option -A with x64 to create a x64 solution or Win32 to create a Win32 solution. Then use nmake For example:
        ```
@@ -35,7 +34,7 @@ cmake ..\cmake -A x64
 REM Build
 MSBuild vhttp.sln /p:Configuration=Release;Platform=x64
 
-      ```
+```
     * For Linux, run cmake and then make
 
        ```
@@ -43,14 +42,15 @@ MSBuild vhttp.sln /p:Configuration=Release;Platform=x64
 #export BOOST_ROOT={boost install dir}
 cmake ../cmake
 make
-       ```
+```
 
 #### Run
    ```
 Usage: vhttp <address> <port> <doc_root> <threads>
 Example:
     vhttp 0.0.0.0 8080 . 1
-   ```
+```
+
 #### Files
   | File                         | Description                                |
   | :--------------------------- | :----------------------------------------- |
