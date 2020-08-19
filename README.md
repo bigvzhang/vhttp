@@ -8,20 +8,20 @@ A minimalistic and fast http server, built in c++ and on boost library.
  - MSVC  version >= 14.0
 
 #### Build
-  1. clone the software from the repsoistory
+##### 1. clone the software from the repsoistory
 
 ```
 git clone https://github.com/bigvzhang/vhttp.git
 ```
-  1. goto the repository and create the build directory and then cd it
+##### 2. goto the repository and create the build directory and then cd it
 
 ```
 cd ${TheRepsitory}
 mkdir build
 cd build
 ```
-  1. use cmake to create projects and build
-    * For windows, specify option -A with x64 to create a x64 solution or Win32 to create a Win32 solution. Then use nmake For example:
+##### 3. use cmake to create projects and build
+######  3.1 For windows, specify option -A with x64 to create a x64 solution or Win32 to create a Win32 solution. Then use msbuild to build the solution. For example:
 ```
 REM if cmake fails to search boost dir, please set the following variables
 REM SET BOOST_INCLUDEDIR={boost header dir}
@@ -35,7 +35,7 @@ REM Build
 MSBuild vhttp.sln /p:Configuration=Release;Platform=x64
 
 ```
-    * For Linux, run cmake and then make
+###### 3.2 For Linux, run cmake and then make
 
 ```
 #if cmake fails to search boost dir, please set the following variable
