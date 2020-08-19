@@ -52,7 +52,7 @@ Example:
    ```
 #### Files
   | File                         | Description                                |
-  | :-------------               | :---------                                 |
+  | :--------------------------- | :----------------------------------------- |
   |src_cpp/main.cpp              | create server                              |
   |src_cpp/range_file_body.hpp   | functions to create range file body        |
   |src_cpp/vhttp_funcs.h         | functions to parse http requests           |
