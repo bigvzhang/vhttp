@@ -181,31 +181,16 @@ handle_request(
 	std::uint64_t  req_range1 = _UI64_MAX; 
 	std::uint64_t  req_range2 = _UI64_MAX;
 	{// parse the range      
-#define PARSE_RANGE_METHOD_1
-#ifdef  PARSE_RANGE_METHOD_1 
-		std::ostringstream oss; oss << req; std::string str_range = oss.str();
-		static std::regex rgx("^Range:\\s*bytes=(\\d+)-(\\d+){0,1}\\s*$");
-		std::cmatch mr;
-		if(std::regex_search(str_range.c_str(), mr, rgx)){
-			req_range1 = bsc::atouint64(mr[1].str().c_str()); 
-			if(mr[2].matched)
-				req_range2 = bsc::atouint64(mr[2].str().c_str());
-			//printf("==***Range request from %s to %s\n", mr[1].str().c_str(), mr[2].str().c_str());
-		}
-#else
-		auto sv_range = req[http::field::content_range];
+		auto sv_range = req[http::field::range];
 		static std::regex rgx("^\\s*bytes=(\\d+)-(\\d+){0,1}\\s*$");
-		std::match_results<bsc_string_view::const_iterator> mr;
+		std::match_results<bsc::string_view::const_iterator> mr;
 		if(std::regex_search(sv_range.begin(), sv_range.end(), mr, rgx)) {
 			req_range1 = bsc::atouint64(mr[1].str()); // TODO: implement "a to uint64"
 			if(mr[2].matched)
 				req_range2 = bsc::atouint64(mr[2].str());
 			//printf("==***Range request from %s to %s\n", mr[1].str().c_str(), mr[2].str().c_str());
 		}
-#endif
 	}
-
-
 
     // Attempt to open the file
     beast::error_code ec;
