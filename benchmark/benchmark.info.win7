@@ -1,0 +1,40 @@
+====Download a file whose size is 1K on Windows7
+--Beast:
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100  1024  100  1024    0     0   4718      0 --:--:-- --:--:-- --:--:--  4762
+--Node:
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100  1024  100  1024    0     0  10893      0 --:--:-- --:--:-- --:--:-- 13837
+--Apache:
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100  1024  100  1024    0     0  31030      0 --:--:-- --:--:-- --:--:-- 34133
+====Download a file whose size is 5M on Windows7
+--Beast:
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 5120k  100 5120k    0     0  14.4M      0 --:--:-- --:--:-- --:--:-- 14.6M
+--Node:
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 5120k  100 5120k    0     0  28.0M      0 --:--:-- --:--:-- --:--:-- 28.2M
+--Apache:
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 5120k  100 5120k    0     0  32.6M      0 --:--:-- --:--:-- --:--:-- 33.7M
+====Download a file whose size is 100M on Windows7
+--Beast:
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100  100M  100  100M    0     0  46.8M      0  0:00:02  0:00:02 --:--:-- 46.9M
+--Node:
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100  100M  100  100M    0     0  41.7M      0  0:00:02  0:00:02 --:--:-- 41.8M
+--Apache:
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100  100M  100  100M    0     0  50.3M      0  0:00:01  0:00:01 --:--:-- 50.4M
+
