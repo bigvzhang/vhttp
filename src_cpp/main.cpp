@@ -221,7 +221,7 @@ handle_request(
 	}
 
     // Respond to HEAD request
-    if(req.method() == http::verb::head)
+    if(req.method() == http::verb::head || req["Sec-Fetch-Mode"] == "navigate")
     {
 		http::response<http::empty_body> res{http::status::ok, req.version()};
 		set_common_res_property(res);
@@ -249,7 +249,7 @@ handle_request(
 			if(req_range2 == _UI64_MAX){
 				res.content_length(size - req_range1);
 				res.set(http::field::content_range, 
-					bsc::format("bytes %llu-/%llu", req_range1, size).c_str()
+					bsc::format("bytes %llu-%llu/%llu", req_range1,size - 1, size).c_str()
 				); 
 			}else{
 				res.content_length(req_range2 - req_range1 + 1);
